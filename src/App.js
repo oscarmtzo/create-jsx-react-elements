@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+
 import './App.css';
 
+/** */
+import logo from './logo.svg'
+
 function App() {
+  const name = "Oscar"
+  const justUpperCase = (anyName)=> {
+    const setOfLetters = []
+    for (let i = 0; i < anyName.length; i++) {
+      setOfLetters.push(anyName[i]);
+    }
+
+    const upperLetters = setOfLetters.filter(
+      (letter) => {
+        if(letter == letter.toUpperCase()) {
+          return letter
+        }
+      }
+    )
+    return upperLetters;
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {name}
+      <div>{name.toUpperCase()}</div>
+      <div>{justUpperCase(name)}</div>
+      <img src={logo} alt="logo image"></img>
     </div>
   );
 }

@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# React - Create React app, JSX, and React Elements
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- understand  ***Create React App*** geenrator and create first React app using ```create-react-app```CLI command,
+- understand what ***JSX*** is and how to write ir and use it in the React app properly,
+- understand how images and files can be added to React projects.
 
-## Available Scripts
+## create-react-app
+Developers at Facebook created an excellent tool to help us start coding our app without a hazard nor running any problems.
+Simply by runnign the following command:
+```
+npx create-react-app name-of-the-app
+```
+or 
+```
+npm init react-app name-of-the-app
+```
+### Create React App is dived into two packages:
+- ***create-react-app*** which is a global command-line utility that is used to create new projects
+- ***react-scripts*** which is a development dependency in the generated projects.
 
-In the project directory, you can run:
+For this lesson, the name of our app is: ***demo-react-app-initialization***, inside there will be a package.json, package-lock.json, .gitignore, README.md, src directory with js, css files, public directory with html, png, manifest.json, robots.txt and favicon.ico files, as well as a node_modules where packages that uses NodeJS through NPM and where all our dependencies are stored.
 
-### `npm start`
+Opening the demo project, inside you can run some built-in commands:
+```
+npm start
+```
+```
+yarn start
+```
+this will run the app in development mode at http://localhost:3000 in your browser.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+npm test
+```
+or 
+```
+yarn test
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Starts the test runner, so  ***create-react-app*** how has built-in to start testing while you are developing it, by default uses ***Jest***.
 
-### `npm test`
+```
+npm run build
+```
+or  
+```
+yarn build
+```
+Build the app for production to the build folder. It correctly bundles React in production mode, which means creates bunch of static files and optimizes the build for the best performance. After succesfully running this command, your app is ready to be deployed.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- At this moment we have created our first React app, it now has an ```App``` React component located on demo-react-app/src/app.js file.
 
-### `npm run build`
+Using the following cmd will run our app;
+```
+npm start
+``` 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- ***src/index.js*** fule is considered to be the default entrance point of any React app (unless stated by you)
+- ***public/index.html*** file is considered to be the default output point for any react app. It has the ```<div id="root">``` tag that the whole app will be appended to,
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## JSX and Elements
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+***JSX*** stand for ***J***ava***S***cript e***X***tension, which is a synta extension to JavaScript, is similar to HTML but has the power of JavaScript.
 
-### `npm run eject`
+Because browsers don't understand JSX, this will be compiled into browser understandable code thanks to Babel.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
